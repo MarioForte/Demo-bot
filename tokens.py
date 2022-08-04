@@ -1,0 +1,10 @@
+user_token = ''
+bot_token = ''
+tgbot_token = ''
+audio_dict = {'иуиу': 'doc410223384_631305082', 'милашка': 'doc410223384_631305110'}
+bot_id = -123456789
+mos_vid = ["video-181603019_456239022"]
+gif = "doc410223384_579964312"
+admin_list = [410223384]
+kuli4_audio = ['doc410223384_633043564']
+banned_nicks = [158617619, 354848035]
