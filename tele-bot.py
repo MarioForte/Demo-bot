@@ -10,7 +10,7 @@ bot = telebot.TeleBot(tgbot_token)
 vk_session = vk_api.VkApi(token=user_token)
 vk = vk_session.get_api()
 owner_id=bot_id
-album_id=285527452
+album_id=285527425
 photos_dict = vk.photos.get(owner_id=owner_id, album_id=album_id)
 photos_dict = vk.photos.get(owner_id=owner_id, album_id=album_id, count=photos_dict.get('count'))
 photos_list = photos_dict.get('items')
@@ -32,10 +32,10 @@ def witless_kuli4(message):
 
 @bot.inline_handler(lambda query: query.query == '')
 def query_photo(inline_query):
-    pics = random.sample(photos, k=50)
+    pics = random.sample(photos, k=10)
     try:
-        res=[types.InlineQueryResultPhoto(id=i, photo_url=pics[i], thumb_url=pics[i]) for i in range(0, 50)]
+        res=[types.InlineQueryResultPhoto(id=i, photo_url=pics[i], thumb_url=pics[i]) for i in range(0, 9)]
         bot.answer_inline_query(inline_query.id, res)
     except Exception as e:
-        print(e)
+        print(e)        
 bot.polling()
